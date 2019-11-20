@@ -69,7 +69,7 @@ public class Exercise_1{
 	
 		String[] tenSV = new String[10];
 		
-		tenSV[0] = ho[0] +" "+ tenDem[0]+" "+ ten[0];
+		tenSV[0] =(ho[0] +" "+ tenDem[0]+" "+ ten[0]);
 		tenSV[1] = ho[1] +" "+ tenDem[1]+" "+ ten[1];
 		tenSV[2] = ho[2] +" "+ tenDem[2]+" "+ ten[2];
 		tenSV[3] = ho[3] +" "+ tenDem[3]+" "+ ten[3];
@@ -80,10 +80,13 @@ public class Exercise_1{
 		tenSV[8] = ho[1] +" "+ tenDem[0]+" "+ ten[0];
 		tenSV[9] = ho[2] +" "+ tenDem[0]+" "+ ten[0];
 
-		System.out.println("FullName"+"  "+"ID"+"  "+"Birth Date");
+		
+		System.out.printf("%-20s %20s %20s\n\n","Full name","ID","Birth date");
+	
 		for(int i=0;i<tenSV.length;i++) {
-			System.out.println(tenSV[i]+ "  "+ ID[i]+"  " +birthDate[i]);
+			System.out.printf("%-20s %20s %20s\n",tenSV[i],ID[i],birthDate[i]);
 		}
+
 		
 	}
 }
