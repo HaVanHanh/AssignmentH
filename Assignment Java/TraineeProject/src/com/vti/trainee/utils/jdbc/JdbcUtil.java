@@ -11,11 +11,8 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.List;
 import java.util.Properties;
-import java.util.Scanner;
 
-import com.vti.trainee.entites.Trainee;
 import com.vti.trainee.utils.Constant;
-import com.vti.trainee.utils.ScannerUtils;;
 
 /**
  * This class is .
@@ -29,7 +26,7 @@ import com.vti.trainee.utils.ScannerUtils;;
  */
 public class JdbcUtil {
 	private static JdbcUtil instance;
-
+	
 	private Connection connection;
 	private Statement statement;
 	private PreparedStatement prepared;
@@ -86,6 +83,10 @@ public class JdbcUtil {
 			// if connect is null or close then connect again
 			if (null == connection || connection.isClosed()) {
 				// register the driver class with DriverManager
+				/**
+				-- Class.forName(com.mysql.cj.jdbc.Driver);
+				
+				*/
 				Class.forName(Constant.DRIVER_SQL_NAME);
 
 				// set username & password SQL
